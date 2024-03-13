@@ -88,6 +88,7 @@ typedef unsigned int mp_uint_t;     // must be pointer size
 #define MICROPY_HW_SDCARD_DETECT_PULL       (GPIO_PULLUP)
 #define MICROPY_HW_SDCARD_DETECT_PRESENT    (GPIO_PIN_RESET)
 
+
 // USB config
 #define MICROPY_HW_USB_FS                   (1)
 #define MICROPY_HW_USB_CDC_RX_DATA_SIZE     (512)
