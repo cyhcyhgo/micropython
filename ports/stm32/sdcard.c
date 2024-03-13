@@ -199,8 +199,8 @@ void sdcard_init(void) {
 	#define   PRINT_MACRO_HELPER(x)   #x
 #define   PRINT_MACRO(x)   #x"="PRINT_MACRO_HELPER(x)
 //print
-#pragma message(PRINT_MACRO(MICROPY_HW_SDCARD_DETECT_PIN))
-#pragma message(PRINT_MACRO(pin_C9))
+#pragma message(PRINT_MACRO(pin_G7_obj))
+#pragma message(PRINT_MACRO(pin_C9_obj))
     mp_hal_pin_config(MICROPY_HW_SDCARD_DETECT_PIN, MP_HAL_PIN_MODE_INPUT, MICROPY_HW_SDCARD_DETECT_PULL, 0);
     #endif
 }
