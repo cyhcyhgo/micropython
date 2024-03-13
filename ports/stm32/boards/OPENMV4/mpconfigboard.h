@@ -84,11 +84,7 @@ typedef unsigned int mp_uint_t;     // must be pointer size
 #define MICROPY_HW_CAN_IS_RESERVED(id) (id != PYB_CAN_2)
 
 // SD card detect switch
-#ifndef pin_G7
-#define pin_G7  &(GPIOG_BASE | 7)
-#endif
-
-#define MICROPY_HW_SDCARD_DETECT_PIN        (pin_G7)
+#define MICROPY_HW_SDCARD_DETECT_PIN        (pin_D0)
 #define MICROPY_HW_SDCARD_DETECT_PULL       (GPIO_PULLUP)
 #define MICROPY_HW_SDCARD_DETECT_PRESENT    (GPIO_PIN_RESET)
 
