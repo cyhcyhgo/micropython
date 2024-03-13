@@ -85,7 +85,7 @@ typedef unsigned int mp_uint_t;     // must be pointer size
 
 // SD card detect switch
 #ifndef pin_G7
-#define pin_G7  (GPIOG_BASE | 7)
+#define pin_G7  (&pin_G7_obj)
 #endif
 
 #define MICROPY_HW_SDCARD_DETECT_PIN        (pin_G7)
