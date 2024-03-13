@@ -196,6 +196,11 @@ void sdcard_init(void) {
     // configure the SD card detect pin
     // we do this here so we can detect if the SD card is inserted before powering it on
     #if defined(MICROPY_HW_SDCARD_DETECT_PIN)
+	#define   PRINT_MACRO_HELPER(x)   #x
+#define   PRINT_MACRO(x)   #x"="PRINT_MACRO_HELPER(x)
+//print
+#pragma message(PRINT_MACRO(MICROPY_HW_SDCARD_DETECT_PIN))
+#pragma message(PRINT_MACRO(pin_C9))
     mp_hal_pin_config(MICROPY_HW_SDCARD_DETECT_PIN, MP_HAL_PIN_MODE_INPUT, MICROPY_HW_SDCARD_DETECT_PULL, 0);
     #endif
 }
